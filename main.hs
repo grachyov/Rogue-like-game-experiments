@@ -86,9 +86,9 @@ reduceStrs (s:rest) = s ++ ['\n'] ++ reduceStrs rest
 
 visibleRadius = 5
 
-getVievedChunk table x y = let cut = \w z -> take (2*visibleRadius + 1) (drop (w - visibleRadius - 1) z)
+getViewedChunk table x y = let cut = \w z -> take (2*visibleRadius + 1) (drop (w - visibleRadius - 1) z)
     in map (cut y) (cut x table) 
 
 main = do 
-    putStrLn $ reduceStrs $ reduceTable2Strs (getVievedChunk (produceTableFrom (map show [10000000000000000..10000000000001000])) 12 12) 
+    putStrLn $ reduceStrs $ reduceTable2Strs (getViewedChunk (produceTableFrom (map show [10000000000000000..10000000000001000])) 12 12) 
     putStrLn $ show player
