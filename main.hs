@@ -39,7 +39,7 @@ colorProduct c = cPrefix ++ c ++ cSuffix
 
 snake,goblin,rat,bat,player :: EntityType
 snake =  EntityType 'S' Enemy 10 10 1
-goblin = EntityType 'g' Enemy 5 0 2
+goblin = EntityType 'g' Enemy 5 0 5
 rat = EntityType 'r' Enemy 3 0 1
 bat = EntityType 'b' Enemy 7 0 2
 player = EntityType '@' Player 10 10 2
